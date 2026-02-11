@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: delta-hedge
+    runtime: node
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: WALLET_ADDRESS
+        sync: false
+      - key: RPC_URL
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
